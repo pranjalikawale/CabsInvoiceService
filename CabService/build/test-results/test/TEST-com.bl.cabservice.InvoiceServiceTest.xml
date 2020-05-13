@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bl.cabservice.InvoiceServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-13T09:46:01" hostname="SWAPNIKA" time="0.003">
+<testsuite name="com.bl.cabservice.InvoiceServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-05-13T10:16:19" hostname="SWAPNIKA" time="0.031">
   <properties/>
-  <testcase name="givenDistanceAndTime_ShouldReturnTotalFare" classname="com.bl.cabservice.InvoiceServiceTest" time="0.003"/>
+  <testcase name="givenLessDistanceAndTime_ShouldReturnMinFare" classname="com.bl.cabservice.InvoiceServiceTest" time="0.009"/>
+  <testcase name="givenDistanceAndTime_ShouldReturnTotalFare" classname="com.bl.cabservice.InvoiceServiceTest" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
