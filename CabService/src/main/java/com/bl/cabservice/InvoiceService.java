@@ -1,23 +1,42 @@
 package com.bl.cabservice;
 
 public class InvoiceService {
-    private static final int COST_PR_TIME = 1;
-    private static final double MINIMUM_COST_PER_KILOMETER = 10;
-    private static final double MINIMUM_FARE=5;
+
+    public  int costPerTime ;
+    public  double minimumCostPerKilometer ;
+    public  double minimumFare;
     private final RideRepository rideRepository;
 
     public InvoiceService(){
         this.rideRepository=new RideRepository();
     }
-    public double calculateFare(double distance, int time) {
-        double totalFare=distance*MINIMUM_COST_PER_KILOMETER+time*COST_PR_TIME;
-        return Math.max(totalFare,MINIMUM_FARE);
+
+    public  double getCalculateFare(String typeOfRides,double distance,int time){
+        switch (typeOfRides){
+            case "Normal Ride":
+                costPerTime= 1;
+                minimumCostPerKilometer = 10;
+                minimumFare=5;
+                break;
+            case "Premium Ride":
+                costPerTime= 2;
+                minimumCostPerKilometer = 15;
+                minimumFare=20;
+                break;
+        }
+        return calculateFare(distance,time);
     }
 
-    public InvoiceSummary  calculateFare(Ride[] rides) {
+
+    public double calculateFare(double distance, int time) {
+        double totalFare=distance*minimumCostPerKilometer+time*costPerTime;
+        return Math.max(totalFare,minimumFare);
+    }
+
+    public InvoiceSummary calculateFare(Ride[] rides) {
         double totalFare=0;
         for (Ride ride:rides){
-            totalFare+=this.calculateFare(ride.distance,ride.time);
+            totalFare+=this.getCalculateFare(ride.type,ride.distance,ride.time);
         }
         return new InvoiceSummary(rides.length,totalFare);
     }
@@ -29,4 +48,5 @@ public class InvoiceService {
     public InvoiceSummary getInvoiceSummary(String userId){
         return this.calculateFare(rideRepository.getRides(userId));
     }
+
 }

@@ -12,7 +12,7 @@ public class RideRepository {
         this.userRides=new HashMap<>();
     }
 
-    public void addRides(String userId, Ride[] rides) {
+    public void addRides(String userId,Ride[] rides) {
         ArrayList<Ride> rideArrayList=this.userRides.get(userId);
         if(rideArrayList==null) {
             this.userRides.put(userId,new ArrayList<>(Arrays.asList(rides)));

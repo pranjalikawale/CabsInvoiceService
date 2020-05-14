@@ -2,10 +2,12 @@ package com.bl.cabservice;
 
 public class Ride {
     public double distance;
-    public final int time;
+    public int time;
+    public String type;
 
-    public Ride(double distance, int time) {
+    public Ride(String type,double distance, int time) {
         this.distance=distance;
         this.time=time;
+        this.type=type;
     }
 }

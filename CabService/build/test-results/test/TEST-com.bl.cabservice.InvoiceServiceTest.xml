@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bl.cabservice.InvoiceServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-05-14T09:24:06" hostname="SWAPNIKA" time="0.038">
+<testsuite name="com.bl.cabservice.InvoiceServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-05-14T12:20:51" hostname="SWAPNIKA" time="0.036">
   <properties/>
   <testcase name="givenLessDistanceAndTime_ShouldReturnMinFare" classname="com.bl.cabservice.InvoiceServiceTest" time="0.006"/>
-  <testcase name="givenUserIdAndRides_ShouldReturnInvoiceSummary" classname="com.bl.cabservice.InvoiceServiceTest" time="0.009"/>
-  <testcase name="givenMultipleRide_ShouldReturnTotalFare" classname="com.bl.cabservice.InvoiceServiceTest" time="0.004"/>
-  <testcase name="givenDistanceAndTime_ShouldReturnTotalFare" classname="com.bl.cabservice.InvoiceServiceTest" time="0.001"/>
+  <testcase name="givenUserIdAndRides_ShouldReturnInvoiceSummary" classname="com.bl.cabservice.InvoiceServiceTest" time="0.006"/>
+  <testcase name="givenTypeOfRideDistanceAndTime_ShouldReturnTotalFare" classname="com.bl.cabservice.InvoiceServiceTest" time="0.003"/>
+  <testcase name="givenMultipleRide_ShouldReturnTotalFare" classname="com.bl.cabservice.InvoiceServiceTest" time="0.003"/>
+  <testcase name="givenDistanceAndTime_ShouldReturnTotalFare" classname="com.bl.cabservice.InvoiceServiceTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
