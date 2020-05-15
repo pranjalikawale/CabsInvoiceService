@@ -1,4 +1,4 @@
-package com.bl.cabservice;
+package com.bl.cabservice.service;
 
 import java.util.Objects;
 
